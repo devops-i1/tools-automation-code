@@ -1,7 +1,12 @@
 variable "tools" {
   default = {
     prometheus = {
-      instance_type = "t3.small"
+      instance_type        = "t3.small"
+      policy-resource-list = ["ec2:DescribeInstances"]
+    }
+
+    grafana = {
+      instance_type        = "t3.small"
       policy-resource-list = ["ec2:DescribeInstances"]
     }
   }
