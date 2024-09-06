@@ -1,4 +1,4 @@
-- name: Set Nme Prompt
+- name: Set Name Prompt
   ansible.builtin.shell: set-prompt grafana
 
 - name: Copy Grafana repo file
