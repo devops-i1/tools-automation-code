@@ -45,3 +45,6 @@
 #
 #  Generate an enrollment token for Kibana instances with
 #  /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+
+#  Generate an enrollment token for Elasticsearch nodes with
+#  /usr/share/kibana/bin/kibana-verification-code
