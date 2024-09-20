@@ -14,11 +14,6 @@ variable "tools" {
       instance_type        = "t3.small"
       policy-resource-list = []
     }
-
-    elk = {
-      instance_type        = "r7i.large"
-      policy-resource-list = []
-    }
   }
 }
 
