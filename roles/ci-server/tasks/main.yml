@@ -13,3 +13,6 @@
     dest: /home/ec2-user/github-runner
     remote_src: yes
   become_user: ec2-user
+
+- name: Install Dependencies
+  ansible.builtin.shell: /home/ec2-user/github-runner/bin/installdependencies.sh
