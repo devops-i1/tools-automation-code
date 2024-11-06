@@ -1,0 +1,11 @@
+- name: Set Name Prompt
+  ansible.builtin.shell: set-prompt sonarqube
+
+- name: Add sonarqube user
+  ansible.builtin.user:
+    name: sonar
+
+- name: Install Java
+  ansible.builtin.dnf:
+    name: java-17-openjdk
+    state: installed
