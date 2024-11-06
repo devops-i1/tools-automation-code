@@ -21,9 +21,14 @@ variable "tools" {
     }
 
     ci = {
-      instance_type        = "t3.small"
+      instance_type = "t3.small"
       policy-resource-list = []
     }
+
+    sonarqube = {
+      instance_type        = "t3.large"
+      policy-resource-list = []
+      }
   }
 }
 
