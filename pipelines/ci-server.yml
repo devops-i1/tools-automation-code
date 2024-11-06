@@ -18,4 +18,4 @@ pipelines:
           jobs:
             ansible:
               tasks:
-                - exec: {command: ansible-playbook, arguments: [  "-i", "ci-server-internal.akhilsaidevops.online,", "tools.yml", "-e", "tool_name=ci-server", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321", "-e", "vault_token=${vault_token}"], run_if: passed}
+                - exec: {command: ansible-playbook, arguments: [  "-i", "ci-server-internal.akhilsaidevops.online,", "tools.yml", "-e", "tool_name=ci-server", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321", "-e", "vault_token=$(vault_token)"], run_if: passed}
