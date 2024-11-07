@@ -21,7 +21,7 @@
   ansible.builtin.shell: ./config.sh  --unattended --url https://github.com/devops-i1 --token {{secrets.GITHUB_RUNNER_TOKEN}}
   args:
     chdir: /home/ec2-user/github-runner
-    become_user: ec2-user
+  become_user: ec2-user
 
 #- name: debug
 #  ansible.builtin.shell: "echo {{ secrets.GITHUB_RUNNER_TOKEN }} >/tmp/1"
