@@ -4,4 +4,4 @@ shared:
   node:
   database:
     allowNonPostgresql: true
-  access: >/opt/jfrog/artifactory/var/etc/system.yaml
+access:
