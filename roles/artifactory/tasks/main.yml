@@ -12,6 +12,11 @@
     state: installed
     disable_gpg_check: true
 
+- name: Copy system file
+  ansible.builtin.template:
+    src: system.yml
+    dest: /opt/jfrog/artifactory/var/etc/system.yaml
+
 - name: Start Artifactory
   ansible.builtin.systemd_service:
     name: artifactory
