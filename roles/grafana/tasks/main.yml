@@ -1,20 +1,25 @@
-- name: Set Name Prompt
-  ansible.builtin.shell: set-prompt grafana
-
-- name: Copy Grafana repo file
-  ansible.builtin.template:
-    src: grafana.repo
-    dest: /etc/yum.repos.d/grafana.repo
-
-- name: Install Grafana
-  ansible.builtin.dnf:
-    name: grafana
-    state: installed
+#- name: Set Name Prompt
+#  ansible.builtin.shell: set-prompt grafana
+#
+#- name: Copy Grafana repo file
+#  ansible.builtin.template:
+#    src: grafana.repo
+#    dest: /etc/yum.repos.d/grafana.repo
+#
+#- name: Install Grafana
+#  ansible.builtin.dnf:
+#    name: grafana
+#    state: installed
 
 - name: Copy Datasource
   ansible.builtin.template:
     src: prom-datasource.yml
     dest: /etc/grafana/provisioning/datasources/prom.yml
+
+- name: Copy Grafana repo file
+  ansible.builtin.template:
+    src: sample-dash.json
+    dest: /tmp/sample-dash.json
 
 - name: Import Grafana dashboard foo
   community.grafana.grafana_dashboard:
@@ -24,7 +29,7 @@
     state: present
     commit_message: Updated by ansible
     overwrite: true
-    path: "{{ lookup('ansible.builtin.template', './sample-dash.json') }}"
+    path: /tmp/sample-dash.json
 
 - name: Start grafana service
   ansible.builtin.systemd_service:
