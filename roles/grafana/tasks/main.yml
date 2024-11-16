@@ -11,6 +11,11 @@
     name: grafana
     state: installed
 
+- name: Copy Datasource
+  ansible.builtin.template:
+    src: prom-datasource.yml
+    dest: /etc/grafana/provisioning/datasources/prom.yml
+
 - name: Start grafana service
   ansible.builtin.systemd_service:
     name: grafana-server
