@@ -16,6 +16,16 @@
     src: prom-datasource.yml
     dest: /etc/grafana/provisioning/datasources/prom.yml
 
+- name: Import Grafana dashboard foo
+  community.grafana.grafana_dashboard:
+    grafana_url: http://localhost:3000
+    grafana_user: "admin"
+    grafana_password: "admin123"
+    state: present
+    commit_message: Updated by ansible
+    overwrite: true
+    path: "{{ lookup('ansible.builtin.template', './sample-dash.json') }}"
+
 - name: Start grafana service
   ansible.builtin.systemd_service:
     name: grafana-server
