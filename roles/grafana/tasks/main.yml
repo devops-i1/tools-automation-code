@@ -17,7 +17,7 @@
     dest: /etc/grafana/provisioning/datasources/prom-datasource.yml
 
 - name: Copy template
-  ansible.builtin.template:
+  ansible.builtin.copy:
     src: node-exporter.json
     dest: /tmp/node-exporter.json
 
