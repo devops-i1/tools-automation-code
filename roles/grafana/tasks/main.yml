@@ -38,6 +38,7 @@
     commit_message: Updated by ansible
     overwrite: true
     path: /tmp/sample-dash.json
+    folder: ProjectDashboards
 
 - name: Start Grafana
   ansible.builtin.systemd_service:
