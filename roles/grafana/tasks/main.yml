@@ -29,7 +29,7 @@
     title: "ProjectDashboards"
     state: present
 
-- name: Import Grafana dashboard foo
+- name: Import Grafana dashboard Node Exporter
   community.grafana.grafana_dashboard:
     grafana_url: http://localhost:3000
     grafana_user: "admin"
