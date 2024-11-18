@@ -19,7 +19,7 @@
 - name: Copy template
   ansible.builtin.template:
     src: sample-dash.json
-    dest: /tmp/sample-dash.json
+    dest: /tmp/node-exporter.json
 
 - name: Create a folder
   community.grafana.grafana_folder:
@@ -37,7 +37,7 @@
     state: present
     commit_message: Updated by ansible
     overwrite: true
-    path: /tmp/sample-dash.json
+    path: /tmp/node-exporter.json
     folder: ProjectDashboards
 
 - name: Start Grafana
