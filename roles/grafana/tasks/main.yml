@@ -21,6 +21,14 @@
     src: sample-dash.json
     dest: /tmp/sample-dash.json
 
+- name: Create a folder
+  community.grafana.grafana_folder:
+    url: http://localhost:3000
+    grafana_user: "admin"
+    grafana_password: "Akhil098765@"
+    title: "ProjectDashboards"
+    state: present
+
 - name: Import Grafana dashboard foo
   community.grafana.grafana_dashboard:
     grafana_url: http://localhost:3000
