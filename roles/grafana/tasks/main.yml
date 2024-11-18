@@ -1,15 +1,15 @@
-#- name: Set Name Prompt
-#  ansible.builtin.shell: set-prompt grafana
-#
-#- name: Copy Grafana repo file
-#  ansible.builtin.template:
-#    src: grafana.repo
-#    dest: /etc/yum.repos.d/grafana.repo
-#
-#- name: Install Grafana
-#  ansible.builtin.dnf:
-#    name: grafana
-#    state: installed
+- name: Set Name Prompt
+  ansible.builtin.shell: set-prompt grafana
+
+- name: Copy Grafana repo file
+  ansible.builtin.template:
+    src: grafana.repo
+    dest: /etc/yum.repos.d/grafana.repo
+
+- name: Install Grafana
+  ansible.builtin.dnf:
+    name: grafana
+    state: installed
 
 - name: Copy Datasource
   ansible.builtin.template:
@@ -18,7 +18,7 @@
 
 - name: Copy template
   ansible.builtin.template:
-    src: sample-dash.json
+    src: node-exporter.json
     dest: /tmp/node-exporter.json
 
 - name: Create a folder
