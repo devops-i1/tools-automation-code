@@ -23,4 +23,4 @@ scrape_configs:
         port: 80
         filters:
           - name: tag:Name
-            values: ["frontend-dev", "frontend-prod"]
+            values: [ "frontend-dev", "frontend-prod" ]
