@@ -26,7 +26,7 @@
 
 - name: Include task list in play
   ansible.builtin.include_tasks:
-    file: import-dashboard.yaml
+    file: import-dashboard.yml
   loop:
     - node-exporter
     - caddy
