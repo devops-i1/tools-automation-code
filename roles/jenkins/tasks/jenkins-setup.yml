@@ -1,4 +1,4 @@
-- name: Set Name Prompt
+- name: Set Prompt
   ansible.builtin.shell: set-prompt jenkins
 
 - name: Copy Jenkins repo file
