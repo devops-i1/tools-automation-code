@@ -22,7 +22,7 @@ variable "tools" {
 
     ci-server = {
       instance_type = "t3.small"
-      policy-resource-list = ["ecr:*"]
+      policy-resource-list = ["ecr:*", "eks:*", "ec2:*"]
     }
 
 #     sonarqube = {
