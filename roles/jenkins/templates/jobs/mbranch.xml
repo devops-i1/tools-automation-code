@@ -28,7 +28,7 @@
             <jenkins.branch.BranchSource>
                 <source class="jenkins.plugins.git.GitSCMSource" plugin="git@5.6.0">
                     <id>10613ee0-b1a3-4f00-ae2b-c890b5e9ad39</id>
-                    <remote>https://github.com/devops-i1/expense-{{item}}.git</remote>
+                    <remote>https://github.com/devops-i1/roboshop-{{item}}.git</remote>
                     <credentialsId></credentialsId>
                     <traits>
                         <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
