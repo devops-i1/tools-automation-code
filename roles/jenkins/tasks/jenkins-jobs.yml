@@ -9,7 +9,12 @@
     dest: /tmp/{{item}}.xml
   loop:
     - frontend
-    - backend
+    - cart
+    - catalogue
+    - user
+    - shipping
+    - payment
+    - dispatch
   delegate_to: localhost
   become: false
 
